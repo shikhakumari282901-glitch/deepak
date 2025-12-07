@@ -1,0 +1,200 @@
+<!--
+File: index.html
+Description: Single-file responsive landing page with basic SEO, JSON-LD structured data, sitemap.xml & robots.txt snippets, and step-by-step deploy instructions for GitHub Pages and Netlify + Google Indexing guide.
+
+Use: Open this file locally to preview. Follow the Deploy section below to publish on web and submit to Google Search Console.
+-->
+
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>आपकी नई वेबसाइट — [Your Name / Business]</title>
+  <meta name="description" content="यह एक सरल, तेज़ और मोबाइल-फ्रेंडली लैंडिंग पेज है — आपके बिज़नेस/परिचय के लिए।" />
+  <meta name="author" content="[Your Name]" />
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="आपकी नई वेबसाइट — [Your Name]" />
+  <meta property="og:description" content="एक सरल और खूबसूरत लैंडिंग पेज। संपर्क करें।" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="https://your-domain.example/og-image.png" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://your-domain.example/" />
+
+  <style>
+    :root{--maxw:1100px;--accent:#0b76ef}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans','Helvetica Neue',Arial;line-height:1.5;margin:0;color:#111}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;background:linear-gradient(135deg,#70b7ff,#6dd3a6);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{font-size:clamp(22px,3.6vw,34px);margin:0}
+    p.lead{color:#333;margin:12px 0 18px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .card{padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(18,24,36,0.06);background:#fff}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+    footer{margin-top:28px;font-size:13px;color:#666}
+    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+          <div style="font-weight:700">[Your Name]</div>
+          <div style="font-size:13px;color:#666">Service • Product • Personal</div>
+        </div>
+      </div>
+      <nav style="font-size:14px;color:#444">
+        <a href="#about" style="margin-right:12px;text-decoration:none;color:inherit">About</a>
+        <a href="#services" style="margin-right:12px;text-decoration:none;color:inherit">Services</a>
+        <a href="#contact" style="text-decoration:none;color:inherit">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>आपका क्लियर और प्रैक्टिकल ऑनलाइन प्रेज़ेंस</h1>
+          <p class="lead">यह पेज तेज़, SEO-friendly और मोबाइल फ्रेंडली है — ग्राहकों को आकर्षित करने के लिए डिज़ाइन किया गया।</p>
+          <p>
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#services">Our Services</a>
+          </p>
+          <div class="features" aria-hidden>
+            <div style="padding:10px">Fast loading</div>
+            <div style="padding:10px">Responsive</div>
+            <div style="padding:10px">SEO basics</div>
+          </div>
+        </div>
+
+        <div id="about" style="margin-top:14px">
+          <div class="card">
+            <h2 style="margin-top:0">About</h2>
+            <p>यह जगह आप अपने छोटे परिचय, सर्विसेज या प्रोडक्ट का छोटा विवरण लिख सकते हैं।</p>
+          </div>
+        </div>
+
+        <div id="services" style="margin-top:14px">
+          <div class="card">
+            <h3 style="margin-top:0">Services</h3>
+            <ul>
+              <li>Service / Offer 1</li>
+              <li>Service / Offer 2</li>
+              <li>Service / Offer 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h4 style="margin-top:0">Contact</h4>
+          <p id="contact">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Phone: +91 9XXXXXXXXX</p>
+          <p><small>Address or short note.</small></p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 style="margin-top:0">Quick CTA</h4>
+          <p>Free consult — Book a 15-min slot.</p>
+          <p><a class="btn btn-primary" href="mailto:you@example.com">Book Now</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> [Your Name]. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Helpful snippets for deployment & SEO -->
+  <!-- robots.txt -->
+  <!--
+  User-agent: *
+  Disallow:
+  Sitemap: https://your-domain.example/sitemap.xml
+  -->
+
+  <!-- sitemap.xml (minimal) -->
+  <!--
+  <?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://your-domain.example/</loc>
+      <lastmod>2025-12-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  </urlset>
+  -->
+
+  <!-- JSON-LD structured data (Organization / Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "[Your Name]",
+    "url": "https://your-domain.example/",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- DEPLOY + GOOGLE LAUNCH GUIDE -->
+  <!--
+  1) Preview locally:
+     - Save this file as index.html, open in browser.
+
+  2) Option A — Free & quick: GitHub Pages
+     - Create GitHub account (github.com) if not already.
+     - Create a new repository named <username>.github.io (exactly).
+     - Commit this index.html to repo main branch.
+     - Visit https://<username>.github.io/ — your site will appear.
+     - To use a custom domain, add CNAME file with your domain and set DNS A/CAA records.
+
+  3) Option B — Netlify (free tier, custom domain friendly)
+     - Create Netlify account (netlify.com).
+     - Drag & drop the folder (index.html) to Sites > New site from drag & drop.
+     - Or connect GitHub repo and enable continuous deploy.
+     - In Netlify Dashboard, set your custom domain and follow DNS instructions.
+
+  4) SSL: Both GitHub Pages and Netlify provide free HTTPS via Let's Encrypt — enable in dashboard.
+
+  5) Google — Indexing (launch to Google Search):
+     - Create Google Search Console account (search.google.com/search-console).
+     - Add property: your domain (preferred) or URL-prefix.
+     - Verify ownership using recommended method (DNS TXT recommended).
+     - In Console, go to URL Inspection -> enter your homepage URL -> Request Indexing.
+     - Submit sitemap.xml in Sitemaps section: https://your-domain.example/sitemap.xml
+
+  6) Useful files to add to repo:
+     - robots.txt (snippet above)
+     - sitemap.xml (snippet above)
+     - CNAME (if using custom domain) containing single line: your-domain.example
+
+  7) Domain registration:
+     - Use Namecheap, GoDaddy, Google Domains, or your favourite registrar.
+     - Buy domain, then update DNS to point to Netlify/GitHub Pages as instructed.
+
+  8) If you want me to produce:
+     - A 1) logo SVG, 2) custom text & images placed in page, 3) ready-to-upload zip, or
+     - A step-by-step terminal commands + Git commands for deploying to GitHub — tell me and I will generate.
+
+  -->
+</body>
+</html>
